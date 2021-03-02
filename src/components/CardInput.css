@@ -1,0 +1,19 @@
+.card-input label {
+    display: block;
+}
+
+.card-input {
+    max-width: 500px;
+    margin: auto;
+}
+.card-input button{
+ width: 182px;
+}
+
+.error {
+    color: red;
+}
+
+label {
+    width: 200px;
+}

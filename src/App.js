@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import Cards from "./components/Cards";
+import AddCard from "./components/AddCard";
+import EditCard from "./components/EditCard";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <Router>
+        <div>
+        <Redirect exact from="/" to="/cards" />
+          <Switch>
+            <Route exact path="/cards">
+              <Cards />
+            </Route>
+            <Route exact path="/cards/add">
+              <AddCard />
+            </Route>
+            <Route exact path="/cards/:id/edit" >
+              <EditCard />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 }
-
-export default App;

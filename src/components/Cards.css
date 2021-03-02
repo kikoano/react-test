@@ -1,0 +1,23 @@
+.card {
+    width: 200px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+.card a {
+    background-color: darkblue;
+    color: white;
+    border-radius: 10px;
+    
+}
+.card a:hover{
+    color: yellow;
+}
+.cardType{
+    text-align: right;
+    padding-right: 10px;
+}
+.addCard a{
+    font-size: 60px;
+    text-align: center;
+}
